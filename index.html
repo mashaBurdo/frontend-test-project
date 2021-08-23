@@ -6,11 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id="container">
 			<div id="header">
-			<h2>header</h2>
+				<h2>header</h2>
 			</div>
 
 			<div id="navigation">
@@ -22,10 +23,8 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					  <div class="navbar-nav">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
-						<a class="nav-link" href="#">Features</a>
-						<a class="nav-link" href="#">Pricing</a>
-						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						  <button id="showForm" type="button" class="btn btn-success">Show form</button>
+						  <button id="hideForm" type="button" class="btn btn-danger">Hide form</button>
 					  </div>
 					</div>
 				  </div>
@@ -61,6 +60,21 @@
 
 
 				<div id="content">
+
+					<div id="formContainer">
+						<form>
+						  <div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+						  </div>
+						  <div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+
 					<div class="card mb-3">
 					  <div class="row g-0">
 						<div class="col-md-4 cat-container">
@@ -110,4 +124,13 @@
 			<h2>footer</h2>
 		</footer>
 	</body>
+	<script type="text/javascript">
+		$('#showForm').on('click', () => {
+			$('#formContainer').css("display", "block");
+		  })
+
+		$('#hideForm').on('click', () => {
+			$('#formContainer').css("display", "none");
+		  })
+	</script>
 </html>

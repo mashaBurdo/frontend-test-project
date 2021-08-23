@@ -57,6 +57,16 @@ footer {
      margin-bottom: 0;
 }
 
+#formContainer {
+    background: #adeac9;
+    padding: 10px 50px;
+    display: none;
+}
+
+nav button {
+    margin: 10px;
+}
+
 @media (max-width: 768px) {
      #content, #sidebar {
           width: 100%;
